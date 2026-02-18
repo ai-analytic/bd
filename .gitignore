@@ -1,0 +1,6 @@
+.env
+*.log
+pg_data/
+node_modules/
+__pycache__/
+.DS_Store
