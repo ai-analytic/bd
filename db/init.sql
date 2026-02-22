@@ -79,6 +79,7 @@ CREATE TABLE IF NOT EXISTS billing_transactions (
 );
 
 -- Индексы
+CREATE INDEX IF NOT EXISTS idx_calls_status ON calls(processing_status);
 CREATE UNIQUE INDEX IF NOT EXISTS uniq_call ON calls(company_id, external_call_id);
 CREATE INDEX IF NOT EXISTS idx_calls_company ON calls(company_id);
 CREATE INDEX IF NOT EXISTS idx_prompts_lookup ON prompt_templates(company_id, call_category);
